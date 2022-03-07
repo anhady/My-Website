@@ -1,0 +1,19 @@
+nav {
+    width: 98%;
+    margin: auto;
+    align-items: center;
+}
+nav a {
+    background-color: #357ded ; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #32e875;
+    font-size: 2vw;
+    text-align: center;
+    margin: 0.4%;
+    padding: 1%;
+    display: inline-flex; 
+    transition: ease-in-out 1s;
+}
+nav a:hover {
+    transform: scale(1.5) translate(2px,2px);
+}

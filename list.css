@@ -1,0 +1,39 @@
+body{
+    background-color: #b24c63;
+}
+h1{
+    color:#07BEB8;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10vw;
+    text-align: center;
+    margin: auto;
+}
+ul{
+    color:#3DCCC7;
+    font-family: sans-serif;
+    font-size: 2vw;
+    float: left;
+    background-color: #C4FFF9;
+    list-style:georgian;
+}
+ol{
+    color:#3DCCC7;
+    font-family: sans-serif;
+    font-size: 2vw;
+    float: right;
+    background-color: #C4FFF9;
+    list-style: lower-greek;
+}
+h2{
+    color:#3DCCC7;
+    font-family: sans-serif;
+    font-size: 2vw;
+    float: right;
+}
+.slides{
+    width: 40vw;
+}
+#slideshow{
+    width: 41vw;
+    margin: auto;
+}

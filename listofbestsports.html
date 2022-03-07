@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="navstyle.css">
+</head>
+<body>
+<h1>Lists of My Favorite Things</h1>
+<nav><a href="index.html">Home</a>
+    <a href="listofbestsports.html">My Favorite Things</a>
+    <a href="Gallery.html">My favorite Music and Videos!</a>
+    <a href="vacation.html">A Vacation Blog!</a>
+    <a href="feedback.html">Give Me Feedback</a>
+    <a href="miniprojects.html">Mini Projects!</a>
+    </nav>
+    <div id="slideshow">
+        <img src="kobe.jpg" alt="" class="slides">
+        <img src="lebron.jpg" alt="" class="slides">
+        <img src="austinreaves.jpg" alt="" class="slides">
+        <img src="dame.jpg" alt="" class="slides">
+    </div>
+    <ul>
+        <h2>List of My Favorite Sports</h2>
+        <li>Basketball</li>
+        <li>Football</li>
+        <li>Swimming</li>
+        <li>Soccer</li>
+        <li>Tennis</li>
+        <li>Cricket</li>
+    </ul>
+    <ol>
+        <h2>List of My Favorite Coding Languages</h2>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Python</li>
+        <li>MIT</li>
+        <li>Scratch</li>
+    </ol>
+    <script>
+        var imgindex=0;
+        function slideshow(){
+            var images=document.getElementsByClassName("slides")
+            for(i=0;i<images.length;i++){
+                images[i].style.display="none";
+            }
+            images[imgindex].style.display="block";
+            imgindex++
+            if(imgindex>=images.length){imgindex=0}
+            setTimeout(slideshow,1000)
+        }
+        slideshow();
+    </script>
+</body>
+</html>

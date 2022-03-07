@@ -1,0 +1,61 @@
+.MainDivision{
+    width: 100%;
+    border: #525174 3px solid;
+    background-color: #BCE784;
+    box-shadow: #5DD39E 5px 5px 4px;
+    border-radius: 10%;
+    padding: 15px;
+    margin: 15px;
+    font-weight: 200;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #348AA7;
+    overflow: hidden;
+}
+body {
+    background-color: #BCE784;
+    color: #348AA7;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2 {
+    text-align: center;
+    font-size: xx-large;
+
+}
+.subdiv {
+    width: 20vw;
+    overflow: hidden;
+    float: left;
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: #525174 3px solid;
+    background-color: #BCE784;
+    box-shadow: #5DD39E 5px 5px 4px;
+    font-weight: 200;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #348AA7;
+    height: fit-content;
+}
+.subdiv img {
+    width: 98%;
+    height: 35vh;
+    transition: 1s;
+}
+.subdiv p {
+    text-align: center;
+    font-size: larger;
+}
+.subdiv audio {
+    margin: 3vw;
+    width: 70%;
+}
+.subdiv video {
+    width: 98%;
+}
+.subdiv iframe {
+    width: 560px;
+    height: 315px;
+}
+.subdiv img:hover {
+    transform: rotate(40deg);
+} 

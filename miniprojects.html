@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="miniprojectstyle.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var r=Math.floor(Math.random()*255)
+    var g=Math.floor(Math.random()*255)
+    var b=Math.floor(Math.random()*255)
+    var color="rgb("+r+", "+g+", "+b+")"
+    var r1=Math.floor(Math.random()*255)
+    var g1=Math.floor(Math.random()*255)
+    var b1=Math.floor(Math.random()*255)
+    var color1="rgb("+r1+", "+g1+", "+b1+")"
+    var r2=Math.floor(Math.random()*255)
+    var g2=Math.floor(Math.random()*255)
+    var b2=Math.floor(Math.random()*255)
+    var color2="rgb("+r2+", "+g2+", "+b2+")"
+
+    var r3=Math.floor(Math.random()*255)
+
+    var g3=Math.floor(Math.random()*255)
+
+    var b3=Math.floor(Math.random()*255)
+
+    var color3="rgb("+r3+", "+g3+", "+b3+")";
+</script>
+</head>
+<body>
+    <h1>My Fun Projects</h1>
+    <nav><a href="index.html">Home</a>
+        <a href="listofbestsports.html">My Favorite Things</a>
+        <a href="Gallery.html">My favorite Music and Videos!</a>
+        <a href="vacation.html">A Vacation Blog!</a>
+        <a href="feedback.html">Give Me Feedback</a>
+        <a href="miniprojects.html">Mini Projects!</a>
+        
+    <div class="projects">
+        <h2>Guess The Color</h2>
+        <button class=buttons id="1" onclick="check(this)"></button>
+        <button class=buttons id="2" onclick="check(this)"></button>
+        <button class=buttons id="3" onclick="check(this)"></button>
+        <button class=buttons id="4" onclick="check(this)"></button>
+        <button id="reset" onclick="refresh()">Restart</button>
+        <p id="result"></p>
+
+    </div>
+    <hr>
+    <div class="projects">
+        <br></br>
+        <h2>Calculator</h2>
+        <form action="" class="calculator" name="form1">
+            <input type="number" name="" id="num1" placeholder="1st Number">
+            <input type="number" name="" id="num2" placeholder="2nd Number">
+            <br><br>
+            <input type="number" name="" id="result" disabled>
+            <br><br>
+            <input type="button" value="+" class="bts" onclick="form1.result.value=parseFloat(form1.num1.value)+parseFloat(form1.num2.value)">
+            <input type="button" value="x" class="bts" onclick="form1.result.value=parseFloat(form1.num1.value)*parseFloat(form1.num2.value)">
+            <input type="button" value="÷" class="bts" onclick="form1.result.value=parseFloat(form1.num1.value)/parseFloat(form1.num2.value)">
+            <input type="button" value="-" class="bts" onclick="form1.result.value=parseFloat(form1.num1.value)-parseFloat(form1.num2.value)">
+            <br><br>
+            <input type="button" value="clear" class="buttons" onclick="form1.result.value='';form1.num1.value='';form1.num2.value='';">
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Leap Year Checker</h2>
+        <label for="year1">
+            Enter Year 1
+        </label>
+        <input type="number" id="year1">
+        <br><br>
+        <label for="year2">
+            Enter Year 2            
+        </label>
+        <input type="year2" id="year2">
+        <br><br>
+        <button onclick="checkleap()">Submit</button>
+        <p id="leapyear"></p>
+    </div>
+    <div>
+        <canvas id="mycanvas">
+
+        </canvas>
+    </div>
+    <script>
+        document.getElementById("1").style.backgroundColor=color
+        document.getElementById("2").style.backgroundColor=color1
+        document.getElementById("3").style.backgroundColor=color2
+        document.getElementById("4").style.backgroundColor=color3
+        var choosenelement=Math.floor(Math.random()*4)+1;
+        console.log(choosenelement)
+        function refresh(){
+            location.reload()
+        }
+        function check(e){
+            console.log(e);
+            var guessedbutton=e.id;
+            console.log(guessedbutton)
+            if(choosenelement==guessedbutton){
+                document.getElementById("result").innerHTML="Congrats You Guessed It Right!"
+            }
+            else{
+                document.getElementById("result").innerHTML="Please Try Again"  
+            }
+        }
+        var leapyears=[]
+        function checkleap(){
+            var y1=document.getElementById("year1").value;
+            var y2=document.getElementById("year2").value;
+            for(var i=y1; i<=y2; i++){
+                isleap(i)
+            }
+            
+        document.getElementById("leapyear").innerHTML=leapyears
+        }
+        function isleap(year){
+            if((year%4==0&&year%100!=0)||(year%4==0&&year%100==0&&year%400==0)){
+                leapyears.push(year)
+            }
+        }
+        var canva=document.getElementById("mycanvas")
+            var c=canva.getContext("2d");
+            canva.width=window.innerWidth-50;
+            canva.height=window.innerHeight-450;
+            canva.style.marginLeft="5vw";
+        var deltax=0;
+        var changex=0
+        var deltay=0;
+        function drawcanvas(){
+            c.clearRect(0,0,canva.width,canva.height)
+            c.font="20px Arial"
+            c.fillStyle="blue"
+            c.strokeStyle="blue"
+            c.fillText("Thanks for Coming!",200,deltay)
+            c.strokeText("Thanks for Coming!",deltax,50)
+            c.beginPath()
+            c.arc(100+changex,100,75,0,2*Math.PI,false)
+            c.stroke()
+            c.fillStyle="black"
+            c.fill()
+
+        changex=changex+10
+        if(changex>canvas.width)
+        {
+            changex=0
+        }
+        deltax=deltax+10
+        deltay=deltay+10
+        if(deltax>canvas.width)
+        {
+            deltax=0
+        }
+        if(deltay>canvas.height)
+        {
+            deltay=0
+        }
+        }
+        setInterval(drawcanvas,1000);
+    </script>
+</body>
+</html>
